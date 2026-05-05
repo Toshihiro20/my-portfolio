@@ -80,7 +80,7 @@ export default function Home() {
         <div className="grid md:grid-cols-2 gap-6">
           {[
             {
-              title: "Project One",
+              title: "Matching Lost and Found Items Using Scale-Invariant Feature Transform",
               desc: "A short description of what this project does and what problem it solves.",
               tags: ["React", "Tailwind"],
               link: "https://github.com"
