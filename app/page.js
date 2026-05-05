@@ -49,7 +49,7 @@ export default function Home() {
         {/* PROFILE PICTURE */}
         <div className="w-36 h-36 rounded-full border-4 border-blue-400 overflow-hidden mb-6 shadow-lg shadow-blue-500/30">
           <img
-            src="c:\Users\HUAWEI\Downloads\mypicture.png"
+            src="c:/mypicture.png"
             alt="Gartly R. Cortez"
             className="w-full h-full object-cover"
           />
@@ -70,7 +70,8 @@ export default function Home() {
         <h2 className="text-3xl font-bold mb-2">Welcome to My Portfolio</h2>
         <div className="w-12 h-1 bg-blue-400 mb-8 mx-auto"></div>
         <p className={`${t.subtext} text-lg mb-8`}>Hi! Im Gartly, a frontend developer passionate about creating clean and user-friendly web experiences. This portfolio showcases some of my projects and skills. Feel free to explore and get in touch! 🚀</p>
-        <a href="#projects" className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-medium transition">See My Work</a>
+        <a href="#home" className={`${t.navlink} transition`}>Home</a>
+        <a href="#about" className={`${t.navlink} transition`}>About</a>
       </section>
 
 
