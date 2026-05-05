@@ -58,6 +58,9 @@ export default function Home() {
       {/*HOME */}
       <section id="home" className="py-24 px-6 max-w-4xl mx-auto text-center">
         <h2 className="text-3xl font-bold mb-2">Welcome to My Portfolio</h2>
+        <div className="w-12 h-1 bg-blue-400 mb-8 mx-auto"></div>
+        <p className={`${t.subtext} text-lg mb-8`}>Hi! Im Gartly, a frontend developer passionate about creating clean and user-friendly web experiences. This portfolio showcases some of my projects and skills. Feel free to explore and get in touch! 🚀</p>
+        <a href="#projects" className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-medium transition">See My Work</a>
         
       </section>
 
