@@ -45,8 +45,18 @@ export default function Home() {
       {/* HERO */}
       <section className="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-20">
         <p className="text-blue-400 text-sm font-medium mb-3 tracking-widest uppercase">Welcome to my portfolio</p>
+
+        {/* PROFILE PICTURE */}
+        <div className="w-36 h-36 rounded-full border-4 border-blue-400 overflow-hidden mb-6 shadow-lg shadow-blue-500/30">
+          <img
+            src="/mypicture.png"
+            alt="Gartly R. Cortez"
+            className="w-full h-full object-cover"
+          />
+        </div>
+
         <h1 className="text-5xl md:text-7xl font-bold mb-4">
-          Hi, I am <span className="text-blue-400">Gartly R. Cortez</span> 👋
+          Hi, I'm <span className="text-blue-400">Gartly R. Cortez</span> 👋
         </h1>
         <p className={`text-xl ${t.subtext} mb-8 max-w-xl`}>I build clean, simple, and enjoyable web experiences.</p>
         <div className="flex gap-4">
@@ -61,7 +71,6 @@ export default function Home() {
         <div className="w-12 h-1 bg-blue-400 mb-8 mx-auto"></div>
         <p className={`${t.subtext} text-lg mb-8`}>Hi! Im Gartly, a frontend developer passionate about creating clean and user-friendly web experiences. This portfolio showcases some of my projects and skills. Feel free to explore and get in touch! 🚀</p>
         <a href="#projects" className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-medium transition">See My Work</a>
-        
       </section>
 
 
