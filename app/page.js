@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import { useState, useEffect, useRef } from "react";
 
@@ -18,7 +19,22 @@ export default function Home() {
     outlineBtn: dark
       ? "border border-gray-600 hover:border-white text-gray-300 hover:text-white"
       : "border border-gray-300 hover:border-gray-900 text-gray-600 hover:text-gray-900",
+    techCard: dark
+      ? "bg-gray-900 border-gray-800 hover:border-blue-500 text-gray-300"
+      : "bg-white border-gray-200 hover:border-blue-400 text-gray-700",
   };
+
+  const techStack = [
+    { name: "HTML",       icon: "🌐" },
+    { name: "CSS",        icon: "🎨" },
+    { name: "JavaScript", icon: "JS" },
+    { name: "React",      icon: "⚛"  },
+    { name: "Next.js",    icon: "▲"  },
+    { name: "Tailwind",   icon: "💨" },
+    { name: "C / C++",    icon: "⚙"  },
+    { name: "Git",        icon: "🔀" },
+    { name: "GitHub",     icon: "🐙" },
+  ];
 
   const projects = [
     {
@@ -85,7 +101,7 @@ export default function Home() {
         </div>
 
         <h1 className="text-5xl md:text-7xl font-bold mb-4">
-          Hi, I'm <span className="text-blue-400">Gartly R. Cortez</span> 👋
+          Hi, I am <span className="text-blue-400">Gartly R. Cortez</span> 👋
         </h1>
 
         <p className={`${t.subtext} text-xl mb-8 max-w-xl`}>
@@ -108,7 +124,7 @@ export default function Home() {
         <div className="w-12 h-1 bg-blue-400 mb-8"></div>
 
         <p className={`${t.subtext} text-lg mb-10`}>
-          "Hi, I'm [Name]. I specialize in frontend development, specifically working within the React ecosystem to build seamless interfaces. While I’m constantly learning new ways to improve my craft, I take pride in delivering straightforward, functional layouts that make the web a little easier to navigate."
+          "Hi, I am Gartly. I specialize in frontend development, specifically working within the React ecosystem to build seamless interfaces. While I'm constantly learning new ways to improve my craft, I take pride in delivering straightforward, functional layouts that make the web a little easier to navigate."
         </p>
 
         <div className="flex flex-wrap gap-3">
@@ -116,6 +132,30 @@ export default function Home() {
             <span key={tech} className={`${t.badge} px-4 py-2 rounded-full text-sm`}>
               {tech}
             </span>
+          ))}
+        </div>
+      </section>
+
+      {/* TECH STACK */}
+      <section className="py-24 px-6 max-w-4xl mx-auto">
+        <h2 className="text-3xl font-bold mb-2">Tech Stack</h2>
+        <div className="w-12 h-1 bg-blue-400 mb-8"></div>
+
+        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-4">
+          {techStack.map((tech) => (
+            <div
+              key={tech.name}
+              className={`
+                ${t.techCard} border rounded-xl
+                flex flex-col items-center justify-center gap-2
+                py-5 px-3 text-center
+                transition-all duration-200
+                hover:scale-105 hover:-translate-y-1
+              `}
+            >
+              <span className="text-2xl leading-none select-none">{tech.icon}</span>
+              <span className="text-sm font-medium">{tech.name}</span>
+            </div>
           ))}
         </div>
       </section>
@@ -142,10 +182,10 @@ export default function Home() {
         </p>
 
         <div className="flex justify-center gap-6">
-          <a href="mailto:youremail@gmail.com" className="bg-blue-500 text-white px-6 py-3 rounded-lg">
+          <a href="mailto:cortezgartly@gmail.com" className="bg-blue-500 text-white px-6 py-3 rounded-lg">
             Email Me
           </a>
-          <a href="https://github.com" className={t.outlineBtn + " px-6 py-3 rounded-lg"}>
+          <a href="https://github.com/Toshihiro20" className={t.outlineBtn + " px-6 py-3 rounded-lg"}>
             GitHub
           </a>
         </div>
