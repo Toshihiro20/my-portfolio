@@ -4,7 +4,7 @@ export default function Home() {
 
       {/* NAVBAR */}
       <nav className="fixed top-0 w-full bg-gray-950/80 backdrop-blur-sm z-50 px-8 py-4 flex justify-between items-center border-b border-gray-800">
-        <span className="text-xl font-bold text-white">myportfolio.dev</span>
+        <span className="text-xl font-bold text-white">gartly.dev</span>
         <div className="flex gap-6 text-gray-400 text-sm">
           <a href="#about" className="hover:text-white transition">About</a>
           <a href="#projects" className="hover:text-white transition">Projects</a>
