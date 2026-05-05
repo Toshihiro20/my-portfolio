@@ -97,6 +97,12 @@ export default function Home() {
               tags: ["Next.js", "Tailwind"],
               link: "https://github.com"
             },
+            {
+              title: "Project Four",
+              desc: "short kineme",
+              tags:["React", "Node.js"],
+              link: "https://github.com"
+            }
           ].map((project) => (
             <div key={project.title} className={`${t.card} border rounded-xl p-6 transition`}>
               <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
