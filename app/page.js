@@ -49,7 +49,7 @@ export default function Home() {
         {/* PROFILE PICTURE */}
         <div className="w-36 h-36 rounded-full border-4 border-blue-400 overflow-hidden mb-6 shadow-lg shadow-blue-500/30">
           <img
-            src="/mypicture.png"
+            src="c:\Users\HUAWEI\Downloads\mypicture.png"
             alt="Gartly R. Cortez"
             className="w-full h-full object-cover"
           />
