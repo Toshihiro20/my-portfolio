@@ -46,7 +46,7 @@ export default function Home() {
       <section className="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-20">
         <p className="text-blue-400 text-sm font-medium mb-3 tracking-widest uppercase">Welcome to my portfolio</p>
         <h1 className="text-5xl md:text-7xl font-bold mb-4">
-          Hi, I'm <span className="text-blue-400">Gartly R. Cortez</span> 👋
+          Hi, I am <span className="text-blue-400">Gartly R. Cortez</span> 👋
         </h1>
         <p className={`text-xl ${t.subtext} mb-8 max-w-xl`}>I build clean, simple, and enjoyable web experiences.</p>
         <div className="flex gap-4">
@@ -60,8 +60,8 @@ export default function Home() {
         <h2 className="text-3xl font-bold mb-2">About Me</h2>
         <div className="w-12 h-1 bg-blue-400 mb-8"></div>
         <p className={`${t.subtext} text-lg leading-relaxed mb-10`}>
-          Hi! I'm a frontend developer who enjoys building interfaces that are clean and easy to use.
-          I'm still growing as a developer but I take pride in writing practical, simple solutions. ✨
+          Hi! I am a frontend developer who enjoys building interfaces that are clean and easy to use.
+          I am still growing as a developer but I take pride in writing practical, simple solutions. ✨
         </p>
         <h3 className="text-xl font-semibold mb-4">Tech Stack</h3>
         <div className="flex flex-wrap gap-3">
