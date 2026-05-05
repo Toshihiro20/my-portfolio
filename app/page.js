@@ -94,14 +94,14 @@ export default function Home() {
           {[
             {
               title: "Matching Lost and Found Items Using Scale-Invariant Feature Transform",
-              desc: "A short description of what this project does and what problem it solves.",
+              desc: "a full-stack lost-and-found management platform using React/TypeScript and Flask with secure admin authentication, claim/report workflows, and intelligent item matching to streamline campus property recovery.",
               tags: ["React", "Tailwind"],
               link: "https://github.com"
             },
             {
-              title: "Project Two",
-              desc: "A short description of what this project does and what problem it solves.",
-              tags: ["HTML", "CSS", "JavaScript"],
+              title: "Cafe Management System",
+              desc: "a C++-based Cafe Management System designed to handle menu display, order processing, and sales record management through a file-driven console application.",
+              tags: ["C/C++"],
               link: "https://github.com"
             },
             {
