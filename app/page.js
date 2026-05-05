@@ -55,6 +55,13 @@ export default function Home() {
         </div>
       </section>
 
+      {/*HOME */}
+      <section id="home" className="py-24 px-6 max-w-4xl mx-auto text-center">
+        <h2 className="text-3xl font-bold mb-2">Welcome to My Portfolio</h2>
+        
+      </section>
+
+
       {/* ABOUT */}
       <section id="about" className="py-24 px-6 max-w-4xl mx-auto">
         <h2 className="text-3xl font-bold mb-2">About Me</h2>
