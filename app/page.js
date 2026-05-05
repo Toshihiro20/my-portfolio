@@ -28,6 +28,7 @@ export default function Home() {
     { name: "HTML",       icon: "🌐" },
     { name: "CSS",        icon: "🎨" },
     { name: "JavaScript", icon: "JS" },
+    { name: "Bootstrap",     icon: "" },
     { name: "React",      icon: "⚛"  },
     { name: "Next.js",    icon: "▲"  },
     { name: "Tailwind",   icon: "💨" },
