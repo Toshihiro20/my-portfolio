@@ -25,6 +25,7 @@ export default function Home() {
       <nav className={`fixed top-0 w-full ${t.nav} backdrop-blur-sm z-50 px-8 py-4 flex justify-between items-center border-b transition-colors duration-300`}>
         <span className="text-xl font-bold">Gartly.dev</span>
         <div className="flex items-center gap-6 text-sm">
+          <a href="#home" className={`${t.navlink} transition`}>Home</a>
           <a href="#about" className={`${t.navlink} transition`}>About</a>
           <a href="#projects" className={`${t.navlink} transition`}>Projects</a>
           <a href="#contact" className={`${t.navlink} transition`}>Contact</a>
@@ -43,13 +44,13 @@ export default function Home() {
       </nav>
 
       {/* HERO */}
-      <section className="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-20">
+      <section id="home" className="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-20">
         <p className="text-blue-400 text-sm font-medium mb-3 tracking-widest uppercase">Welcome to my portfolio</p>
 
         {/* PROFILE PICTURE */}
         <div className="w-36 h-36 rounded-full border-4 border-blue-400 overflow-hidden mb-6 shadow-lg shadow-blue-500/30">
           <img
-            src="c:/mypicture.png"
+            src="/mypicture.png"
             alt="Gartly R. Cortez"
             className="w-full h-full object-cover"
           />
@@ -58,22 +59,14 @@ export default function Home() {
         <h1 className="text-5xl md:text-7xl font-bold mb-4">
           Hi, I'm <span className="text-blue-400">Gartly R. Cortez</span> 👋
         </h1>
-        <p className={`text-xl ${t.subtext} mb-8 max-w-xl`}>I build clean, simple, and enjoyable web experiences.</p>
+        <p className={`text-xl ${t.subtext} mb-8 max-w-xl`}>
+          I build clean, simple, and enjoyable web experiences.
+        </p>
         <div className="flex gap-4">
           <a href="#projects" className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-medium transition">See Projects</a>
           <a href="#contact" className={`${t.outlineBtn} px-6 py-3 rounded-lg font-medium transition`}>Contact Me</a>
         </div>
       </section>
-
-      {/*HOME */}
-      <section id="home" className="py-24 px-6 max-w-4xl mx-auto text-center">
-        <h2 className="text-3xl font-bold mb-2">Welcome to My Portfolio</h2>
-        <div className="w-12 h-1 bg-blue-400 mb-8 mx-auto"></div>
-        <p className={`${t.subtext} text-lg mb-8`}>Hi! Im Gartly, a frontend developer passionate about creating clean and user-friendly web experiences. This portfolio showcases some of my projects and skills. Feel free to explore and get in touch! 🚀</p>
-        <a href="#home" className={`${t.navlink} transition`}>Home</a>
-        <a href="#about" className={`${t.navlink} transition`}>About</a>
-      </section>
-
 
       {/* ABOUT */}
       <section id="about" className="py-24 px-6 max-w-4xl mx-auto">
@@ -119,10 +112,10 @@ export default function Home() {
             },
             {
               title: "Project Four",
-              desc: "short kineme",
-              tags:["React", "Node.js"],
+              desc: "Short description here.",
+              tags: ["React", "Node.js"],
               link: "https://github.com"
-            }
+            },
           ].map((project) => (
             <div key={project.title} className={`${t.card} border rounded-xl p-6 transition`}>
               <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
