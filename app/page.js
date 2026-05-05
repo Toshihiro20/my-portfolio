@@ -23,13 +23,13 @@ export default function Home() {
   const projects = [
     {
       title: "Matching Lost and Found Items Using Scale-Invariant Feature Transform",
-      desc: "a full-stack lost-and-found management platform using React/TypeScript and Flask with secure admin authentication, claim/report workflows, and intelligent item matching.",
+      desc: "Full-stack lost-and-found platform with intelligent matching and admin workflows.",
       tags: ["React", "Tailwind"],
       link: "https://github.com/Ejanng/FLRT-2.0.git",
     },
     {
       title: "Cafe Management System",
-      desc: "a C++-based Cafe Management System designed to handle menu display, order processing, and sales record management.",
+      desc: "C++ system for menu handling, ordering, and sales tracking.",
       tags: ["C/C++"],
       link: "https://github.com",
     },
@@ -55,10 +55,10 @@ export default function Home() {
         <span className="text-xl font-bold">Gartly.dev</span>
 
         <div className="flex items-center gap-6 text-sm">
-          <a href="#home" className={`${t.navlink}`}>Home</a>
-          <a href="#about" className={`${t.navlink}`}>About</a>
-          <a href="#projects" className={`${t.navlink}`}>Projects</a>
-          <a href="#contact" className={`${t.navlink}`}>Contact</a>
+          <a href="#home" className={t.navlink}>Home</a>
+          <a href="#about" className={t.navlink}>About</a>
+          <a href="#projects" className={t.navlink}>Projects</a>
+          <a href="#contact" className={t.navlink}>Contact</a>
 
           <button
             onClick={() => setDark(!dark)}
@@ -74,6 +74,52 @@ export default function Home() {
         </div>
       </nav>
 
+      {/* HERO */}
+      <section id="home" className="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-20">
+        <p className="text-blue-400 text-sm mb-3 uppercase tracking-widest">
+          Welcome to my portfolio
+        </p>
+
+        <div className="w-36 h-36 rounded-full border-4 border-blue-400 overflow-hidden mb-6 shadow-lg shadow-blue-500/30">
+          <img src="/mypicture.png" alt="profile" className="w-full h-full object-cover" />
+        </div>
+
+        <h1 className="text-5xl md:text-7xl font-bold mb-4">
+          Hi, I'm <span className="text-blue-400">Gartly R. Cortez</span> 👋
+        </h1>
+
+        <p className={`${t.subtext} text-xl mb-8 max-w-xl`}>
+          I build clean, simple, and enjoyable web experiences.
+        </p>
+
+        <div className="flex gap-4">
+          <a href="#projects" className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg">
+            See Projects
+          </a>
+          <a href="#contact" className={`${t.outlineBtn} px-6 py-3 rounded-lg`}>
+            Contact Me
+          </a>
+        </div>
+      </section>
+
+      {/* ABOUT */}
+      <section id="about" className="py-24 px-6 max-w-4xl mx-auto">
+        <h2 className="text-3xl font-bold mb-2">About Me</h2>
+        <div className="w-12 h-1 bg-blue-400 mb-8"></div>
+
+        <p className={`${t.subtext} text-lg mb-10`}>
+          I’m a frontend developer who enjoys building clean and user-friendly interfaces.
+        </p>
+
+        <div className="flex flex-wrap gap-3">
+          {["HTML", "CSS", "JavaScript", "React", "Next.js", "Tailwind"].map((tech) => (
+            <span key={tech} className={`${t.badge} px-4 py-2 rounded-full text-sm`}>
+              {tech}
+            </span>
+          ))}
+        </div>
+      </section>
+
       {/* PROJECTS */}
       <section id="projects" className="py-24 px-6 max-w-4xl mx-auto">
         <h2 className="text-3xl font-bold mb-2">Projects</h2>
@@ -86,16 +132,34 @@ export default function Home() {
         </div>
       </section>
 
+      {/* CONTACT */}
+      <section id="contact" className="py-24 px-6 max-w-4xl mx-auto text-center">
+        <h2 className="text-3xl font-bold mb-2">Get In Touch</h2>
+        <div className="w-12 h-1 bg-blue-400 mb-8 mx-auto"></div>
+
+        <p className={`${t.subtext} mb-8`}>
+          Feel free to reach out if you want to collaborate.
+        </p>
+
+        <div className="flex justify-center gap-6">
+          <a href="mailto:youremail@gmail.com" className="bg-blue-500 text-white px-6 py-3 rounded-lg">
+            Email Me
+          </a>
+          <a href="https://github.com" className={t.outlineBtn + " px-6 py-3 rounded-lg"}>
+            GitHub
+          </a>
+        </div>
+      </section>
+
       {/* FOOTER */}
       <footer className={`text-center text-sm py-8 border-t ${t.footer}`}>
-        © 2026 Gartly R. Cortez. All rights reserved.
+        © 2026 Gartly R. Cortez
       </footer>
-
     </main>
   );
 }
 
-/* ✨ Animated Card Component */
+/* ✨ Animated Project Card */
 function AnimatedCard({ project, t, delay }) {
   const ref = useRef(null);
   const [show, setShow] = useState(false);
@@ -111,7 +175,6 @@ function AnimatedCard({ project, t, delay }) {
     );
 
     if (ref.current) observer.observe(ref.current);
-
     return () => observer.disconnect();
   }, [delay]);
 
@@ -119,7 +182,7 @@ function AnimatedCard({ project, t, delay }) {
     <div
       ref={ref}
       className={`
-        ${t.card} border rounded-xl p-6 will-change-transform
+        ${t.card} border rounded-xl p-6
         transform transition-all duration-500 ease-out
         ${show ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-8 scale-95"}
         hover:scale-105 hover:-translate-y-2
