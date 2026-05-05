@@ -108,7 +108,7 @@ export default function Home() {
         <div className="w-12 h-1 bg-blue-400 mb-8"></div>
 
         <p className={`${t.subtext} text-lg mb-10`}>
-          I’m a frontend developer who enjoys building clean and user-friendly interfaces.
+          "Hi, I'm [Name]. I specialize in frontend development, specifically working within the React ecosystem to build seamless interfaces. While I’m constantly learning new ways to improve my craft, I take pride in delivering straightforward, functional layouts that make the web a little easier to navigate."
         </p>
 
         <div className="flex flex-wrap gap-3">
